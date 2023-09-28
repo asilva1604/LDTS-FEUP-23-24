@@ -5,6 +5,7 @@ import com.googlecode.lanterna.screen.Screen;
 import java.io.IOException;
 
 public class Hero {
+    //TODO : Continue from step 9
     private int x;
     private int y;
 
