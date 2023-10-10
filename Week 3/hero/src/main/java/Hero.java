@@ -3,7 +3,6 @@ import com.googlecode.lanterna.graphics.TextGraphics;
 import java.io.IOException;
 
 public class Hero {
-    //TODO : Continue from step 9
     private Position position;
     public Hero(int x, int y) {
         this.position = new Position(x, y);
@@ -33,22 +32,6 @@ public class Hero {
         graphics.setForegroundColor(TextColor.Factory.fromString("#FFFF33"));
         graphics.enableModifiers(SGR.BOLD);
         graphics.putString(new TerminalPosition(position.getX(), position.getY()), "X");
-    }
-
-    public void setX(int x) {
-        position.setX(x);
-    }
-
-    public int getX() {
-        return position.getX();
-    }
-
-    public void setY(int y) {
-        position.setY(y);
-    }
-
-    public int getY() {
-        return position.getY();
     }
 
     public void setPosition(Position position) {

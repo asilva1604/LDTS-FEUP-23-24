@@ -8,7 +8,6 @@ import com.googlecode.lanterna.terminal.Terminal;
 import com.googlecode.lanterna.input.KeyStroke;
 
 import java.io.IOException;
-import java.security.Key;
 
 public class Game {
     private Screen screen;
