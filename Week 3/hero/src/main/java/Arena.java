@@ -8,10 +8,10 @@ import java.util.List;
 
 
 public class Arena {
-    private int width;
-    private int height;
-    private Hero hero;
-    private List<Wall> walls;
+    private final int width;
+    private final int height;
+    private final Hero hero;
+    private final List<Wall> walls;
 
     public Arena(int width, int height) {
         this.width = width;
@@ -19,32 +19,6 @@ public class Arena {
         hero = new Hero(10, 10);
         this.walls = createWalls();
     }
-
-
-    public int getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-    /*
-    public Hero getHero() {
-        return hero;
-    }
-
-    public void setHero(Hero hero) {
-        this.hero = hero;
-    }
-    */
 
     public void processKey(KeyStroke key) {
         switch (key.getKeyType()) {

@@ -5,20 +5,23 @@ import com.googlecode.lanterna.graphics.TextGraphics;
 
 import java.util.List;
 
-public class Wall {
-    private final Position position;
-
+public class Wall extends Element{
     public Wall(int x, int y) {
-        this.position = new Position(x,y);
+        super(x, y);
     }
 
     public void draw(TextGraphics graphics) {
         graphics.setForegroundColor(TextColor.Factory.fromString("#FFFF33"));
         graphics.enableModifiers(SGR.BOLD);
-        graphics.putString(new TerminalPosition(position.getX(), position.getY()), "#");
+        graphics.putString(new TerminalPosition(getPosition().getX(), getPosition().getY()), "#");
     }
 
-    public Position getPosition() {
-        return position;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null) return false;
+        if (getClass() != o.getClass()) return false;
+        Wall p = (Wall) o;
+        return this.getPosition().equals(p.getPosition());
     }
 }
